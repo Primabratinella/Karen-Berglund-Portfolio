@@ -1,135 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="Karen Berglund a front-end developer based in Maryland USA, check out her work and contact her for your projects"
+    />
+    <title>KAREN BERGLUND | front-end developer</title>
 
-    <link 
-    rel="preconnect" 
-    href="https://fonts.googleapis.com"
-    >
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-    <link 
-    rel="preconnect" 
-    href="https://fonts.gstatic.com" 
-    crossorigin
-    >
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">KB</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" 
-    rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="src/style.css"/>
-
-    <title>Karen Berglund Junior Front-end Developer</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" 
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-    crossorigin="anonymous"
-    >
-
-</head>
-
-<body id="top" class="page-home" cz-shortcut-listen="true">
-
-    <div class="page">
-    <div class="banner">
-    <div class="banner-intro">
+<div class="banner">
+<div class="banner-intro">
     <div class="banner-profile-pic"></div>
-        <h1 class="banner-title"> Karen Berglund </h1>
-        <div class="banner-blurb"> 
-            Junior Front-End Developer. Curious Learner. 
-        </div>
-        <a class="btn btn-primary-light" href= "/projects.html"> Visit My Projects </a>
-    </div>
-    </div>
- 
-    <p id="ticker-tape-content" class="ticker-tape">
-            Let's connect on
-            <a href="https://www.linkedin.com/in/karenpearlbberglund/"> LinkedIn</a>.
-    </p>
-
-        <div class="layout-container home-huh">
-            <div class="layout-third-lg"> 
-                <div class="home-huh-blurb">
-                <h1 class="page-title"> About Me </h1>
-                    <p>
-                        Enthusiastic and adaptable Software Developer with a strong foundation in programming, problem-solving, and web design. Proficient in a variety of programming languages including CSS, HTML, Python, JavaScript and React. Quick to learn new technologies and apply them in real-world projects. Looking for an opportunity to contribute to a collaborative team environment and grow technical skills in a dynamic industry. 
-                        View my resume here
-                        <a href="/resume.html">here</a>
-                        .
-                    </p>  
-                </div>
-            </div>
-
-            <div class="layout-two-thirds-lg">
-                <div class="layout-container">
-                    <div class="layout-third-md"> 
-                    <a class="home-bucket" href="/resume.html">
-                        <img 
-                        src="/img/resume.png" 
-                        alt="resume">
-                    </a>
-                    <p class="home-bucket-blurb"> 
-                        My 
-                        <a
-                        href="/resume.html"
-                        > resumé </a> 
-                        and an overview of how I work 
-                    </p>
-                    </div>
-
-                    <div class="layout-third-md"> 
-                    <a class="home-bucket" href="/projects.html">
-                        <img 
-                        src="img/projects.png"
-                        alt="project">
-                    </a>
-                    <p class="home-bucket-blurb"> 
-                        An overview of my various 
-                        <a
-                        href="/projects.html"
-                        > projects </a>
-                    </p>
-                    </div>
-
-                    <div class="layout-third-md"> 
-                    <a class="home-bucket" href="/social.html">
-                        <img
-                        src="img/social.png"
-                        alt="social"
-                        />
-                    </a>
-                    <p> Let's connect on
-                        <a
-                        href="/index.html"
-                        > LinkedIn </a> 
-                    </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="layout-third-lg"> 
-            <div class="home-huh-blurb">
-            <h1 class="page-title"> About the site </h1>
-                <p>
-                    I created this page to curate my projects and showcase my colding skills.
-                    This project was coded by Karen Berglund and is 
-                    <a 
-                    href="https://github.com/Primabratinella/-Berglund-Portfolio"
-                    target="_blank"
-                    > 
-                    open-sourced
-                    </a> 
-                    .
-                </p>  
-            </div>
-        </div>
-
-               
+    <div class="banner-title">Karen Berglund</div>
+    <div class="banner-blurb">Front-end developer. Curious Learner. </div>
+    <div class="navigation-links mb-5">
+      <a href="projects.html" class="secondary-link">See my Projects</a>
     </div>
 </div>
-</body>
+</div>
+
+
+    <div class="about-paragraphs text-center">
+          Let's connect on 
+          <a href="https://www.linkedin.com/in/karenpearlbberglund/"> LinkedIn </a> 
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <img src="img/resume.png" class="img-fluid rounded" />
+        </div>
+        <div class="col-6">
+          <h2 class="mb-3">Resume</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            quia, dignissimos nam ratione veniam quibusdam porro omnis quam vel
+            eos eveniet alias temporibus deserunt veritatis minima fugiat
+            explicabo eum dolore.
+          </p>
+
+          <div class="mt-5">
+            <a href="/resume.html" class="primary-link">Resume</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-6">
+          <h2 class="mb-3">Projects</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            quia, dignissimos nam ratione veniam quibusdam porro omnis quam vel
+            eos eveniet alias temporibus deserunt veritatis minima fugiat
+            explicabo eum dolore.
+          </p>
+          <div class="mt-5">
+            <a href="/projects.html" class="primary-link">Projects</a>
+          </div>
+        </div>
+        <div class="col-6">
+          <img src="img/projects.png" class="img-fluid rounded" />
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="col-6">
+          <img src="img/social.png" class="img-fluid rounded" />
+        </div>
+        <div class="col-6">
+          <h2 class="mb-3">Let's Connect!</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            quia, dignissimos nam ratione veniam quibusdam porro omnis quam vel
+            eos eveniet alias temporibus deserunt veritatis minima fugiat
+            explicabo eum dolore.
+          </p>
+          <div class="mt-5">
+            <a href="https://www.linkedin.com/in/karenpearlbberglund/" class="primary-link">LinkedIn</a>
+          </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-6">
+              <h2 class="mb-3">Resources</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+                quia, dignissimos nam ratione veniam quibusdam porro omnis quam vel
+                eos eveniet alias temporibus deserunt veritatis minima fugiat
+                explicabo eum dolore.
+              </p>
+              <div class="mt-5">
+                <a href="/projects.html" class="primary-link">Resources</a>
+              </div>
+            </div>
+            <div class="col-6">
+              <img src="img/resources.png" class="img-fluid rounded" />
+            </div>
+          </div>
+      </div>
+
+      <footer>
+       
+
+        <div>
+        <h3> About Me </h3>
+            <p>
+                Hi! My name is Karen and I was born and raised in Marikina. I am very fond of this city. I created this page as part of a project for SheCodes Responsive to develop my coding skills.
+            </p>
+        </div>
+
+        <div>
+        <h3> About the website </h3>
+            <p>
+                I created this page as part of a project for SheCodes Responsive to develop my coding skills.
+            <br />
+            This project was coded by Karen Berglund and is 
+            <a 
+            href="https://github.com/Primabratinella/Ph-travel-project"
+            target="_blank"
+        > 
+            open-sourced</a
+        >    
+            </p>
+        </div>
+    
+    </footer>
+
+    </div>
+  </body>
 </html>
