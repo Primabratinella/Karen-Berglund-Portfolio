@@ -2,7 +2,6 @@
   --primary-color: #c54b8c;
   --secondary-color: #fbaed2;
   --box-shadow: 0 5px 10px #317873;
-  
 }
 
 body {
@@ -75,8 +74,8 @@ footer {
   padding: 24px 14px;
   text-decoration: none;
   text-transform: capitalize;
-  color: orangered;
-  border: 1px solid orangered;
+  color: #C54596;
+  border: 1px solid #C54596;
 }
 .homepage-link {
   color: var(--primary-color);
@@ -88,9 +87,9 @@ footer {
   font-size: 24px;
   padding: 1em;
   display: block;
-  background: orangered;
+  background: #C54596;
   font-weight: 400;
-  color: black;
+  color: whitesmoke;
 }
 .about-paragraphs p {
   margin: 20px;
@@ -125,7 +124,7 @@ footer {
 }
 .mb-3 {
 padding: 2px 2px;
-margin-top: 50px;
+margin-top: 80px;
 }
 
 .mb-5 {
@@ -146,9 +145,6 @@ margin-top: 50px;
 .banner-intro {
   text-align: center;
   font-weight: 300;
-
-
-  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -224,7 +220,7 @@ margin-top: 50px;
 @media (min-width: 900px) {
   .banner-intro {
       background: rgba(255, 255, 255, 0.8); 
-      border: 2px solid rgba(255, 255, 255, 0.4); 
+      border: 2px solid rgba(255, 255, 255, 0.6); 
       padding: 5px 10px;
       max-width: 720px;
       margin-bottom: 20px;
