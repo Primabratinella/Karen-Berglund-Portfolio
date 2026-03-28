@@ -18,6 +18,10 @@
     crossorigin="anonymous"
   ></script>
   <link rel="stylesheet" href="css/style.css" />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+  >
+  </script>
 </head>
 
 <body>
@@ -63,29 +67,31 @@
             </div>
         </div>
     </div>
-
+<div class="resume">
     <div class="resume-page">
-        <nav>
-            <a href="resume.pdf" class="nav-link" id="download-link" download> Download PDF </a>
-        </nav>
+        <div class="resume-page" id="resume-content">
+            <nav>
+                <a href="#" class="nav-link" id="download-link">Download in PDF</a>
+            </nav>
 
         <header>
-            <h1>KAREN BERGLUND</h1>
+            <h2>KAREN BERGLUND</h2>
             <p> Junior Front-End Developer | Marketing Specialist | Customer Support Professional | Graphic Designer </p>
         </header>
 
         <section id="contact">
-            <h2>Contact Information</h2>
+            <h3>Contact Information</h3>
             <ul>
                 <li>Email: karen.pearl@hotmail.com</li>
                 <li>Phone: (240) 437-1467</li>
-                <li>LinkedIn: <a href="www.linkedin.com/in/karenpearlbberglund"></a></li>
-                <li>Website: https://karenberglundportfolio.netlify.app/</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/karenpearlbberglund" target="_blank">www.linkedin.com/in/karenpearlbberglund</a></li>
+                <li>Website: <a href="https://karenberglundportfolio.netlify.app/" target="_blank">karenberglundportfolio.netlify.app</a></li>
+
             </ul>
         </section>
 
         <section id="professional-summary">
-            <h2>Professional Summary</h2>
+            <h4>Professional Summary</h4>
             <p>Junior front-end developer with hands-on experience in HTML, CSS, JavaScript, React, and API integration through SheCodes Bootcamp.<br>
                 Brings 10+ years of experience in marketing, customer communication, and project coordination, with a proven ability to build responsive websites and user-friendly digital experiences. 
                 Known for adaptability, problem-solving, and combining technical expertise with creative strategy to deliver impactful results.
@@ -99,7 +105,7 @@
         </section>
 
         <section id="portfolio">
-            <h2>Portfolio</h2>
+            <h4>Portfolio</h4>
             <ul>
                 <li><a href="https://filipinofoodrecipes.netlify.app/" target="_blank">Filipino Food Recipes App</a> — Responsive recipe website built with HTML, CSS, and JavaScript.</li>
                 <li><a href="https://marikinatravelguide.netlify.app/" target="_blank">Marikina Travel Guide</a> — Interactive travel guide featuring structured content and mobile-friendly layouts.</li>
@@ -108,34 +114,34 @@
         </section>
 
         <section id="technologies">
-            <h2>Technologies I Know</h2>
+            <h4>Technologies I Know</h4>
             <p>Web responsiveness | React.js | Python | Bootstrap | HTML5</p>
         </section>
 
         <section id="web-development-tools">
-            <h2>Web & Development Tools</h2>
+            <h4>Web & Development Tools</h4>
             <p>Github | MacOS | VS Code</p>
         </section>
 
         <section id="equipments-tools">
-            <h2>Equipments I use</h2>
+            <h4>Equipments I use</h4>
             <p>Dual-screen | Separate keyboard | Mouse</p>
         </section>
 
         <section id="software-applications">
-            <h2>Software and Applications</h2>
+            <h4>Software and Applications</h4>
             <p> Canva | MS Office | Adobe Acrobat | Photoshop | VS Code, Slack, XCode, Teams, Zoom </p>
         </section>
 
         <section id="other-skills">
-            <h2>Other Skills</h2>
+            <h4>Other Skills</h4>
             <p> Version Control (Git) | Data Manipulation| Object-oriented Programming | AI integration  </p>
         </section>
 
 
         <section id="professional-experience">
-            <h2>Professional Experience</h2>
-            <h3>Independent Learning & Volunteer Work</h3>
+            <h4>Professional Experience</h4>
+            <h5>Independent Learning & Volunteer Work</h5>
             <p>2021 - Present</p>
             <ul>
                 <li>Completed certifications in Front-End Development, Back-End Technology, and Design Thinking</li>
@@ -144,7 +150,7 @@
                 <li>Co-op volunteer for homeschooling families</li>
             </ul>
 
-            <h3>Property Manager | Noah’s Properties</h3>
+            <h5>Property Manager | Noah’s Properties</h5>
             <p>October 2019 – July 2021</p>
             <ul>
                 <li>Reviewed new and renewal lease agreements</li>
@@ -154,7 +160,7 @@
                 <li>Coordinated move-in and move-out inspections while acting as a liaison between county representatives, landlords, and tenants</li>
             </ul>
 
-            <h3>Asst. Property Manager | Noah’s Properties</h3>
+            <h5>Asst. Property Manager | Noah’s Properties</h5>
             <p>August 2019 – October 2019 </p>
             <ul>
                 <li>Supported Property Managers</li>
@@ -162,21 +168,21 @@
                 <li>Cooridnated maintenance, rent collection, invoices and rent notices as per property managers' instructions</li>
             </ul>
 
-            <h3>Social Media Marketing Consultant | Beltway Blinds</h3>
+            <h5>Social Media Marketing Consultant | Beltway Blinds</h5>
             <p> May 2017 – May 2019 </p>
             <ul>
                 <li>Researched market trends and curated targeted social media content</li>
                 <li>Created content calendars and managed daily posts to increase engagement</li>
             </ul>
 
-            <h3>Business Development Consultant | Glickman Design Build </h3>
+            <h5>Business Development Consultant | Glickman Design Build </h5>
             <p> November 2014 – May 2016 </p>
             <ul>
                 <li>Coordinated marketing campaigns, events, and networking workshops</li>
                 <li>Managed social media presence and supported sales initiatives</li>
             </ul>
 
-            <h3>Sr. Analyst | ADP Phils </h3>
+            <h5>Sr. Analyst | ADP Phils </h5>
             <p> August 2012 – November 2014 </p>
             <ul>
                 <li>Supported HR benefits enrollment and client system troubleshooting</li>
@@ -186,31 +192,39 @@
         </section>
 
         <section id="education">
-            <h2>Education and Training</h2>
-            <h3>Junior Front-End Developer</h3>
+            <h4>Education and Training</h4>
+            <h5>Junior Front-End Developer</h5>
             <p>SheCodes Coding Bootcamp, (2021-2026)</p>
-            <h3>BSBA, Marketing</h3>
+            <h5>BSBA, Marketing</h5>
             <p>ABE International College of Business and Accountancy, Philippines (2001-2005)</p>
-            <h3>BS Computer Engineering (Coursework)</h3>
+            <h5>BS Computer Engineering (Coursework)</h5>
             <p>AMA Computer College, Philippines (1999-2000)</p>
         </section>
-
-        Professional Experience
-
 
         <footer>
             <p>&copy; 2026 Karen Berglund. All Rights Reserved.</p>
         </footer>
 
-        <script src="script.js">
-            
+        <script>
             document.getElementById('download-link').addEventListener('click', function(event) {
-                const resumeName = 'Karen_Berglund_resume';
-                alert(Your resume "${resumeName}.pdf" will be downloaded now.);
-});
-
-
+                event.preventDefault(); 
+    
+                const element = document.getElementById('resume-content'); 
+    
+                const header = document.querySelector('header');
+                header.style.display = 'none'; 
+    
+                html2pdf()
+                    .from(element)
+                    .save('Your_Resume.pdf') 
+                    .then(() => {
+                        header.style.display = 'block'; 
+                        alert('Your resume PDF has been generated and will be downloaded.');
+                    });
+            });
         </script>
     </div>
+    
+</div>
 </body>
 </html>

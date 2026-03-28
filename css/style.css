@@ -44,20 +44,21 @@ footer {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 20px;
 }
 
 .navbar {
   background-color: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid rgba (0, 0, 0, 0.1);
+  border-bottom: 0px solid rgba (0, 0, 0, 0.1);
 }
 .navigation-links {
   display: flex;
-  margin-top: 40px;
+  margin-top: 60px;
   justify-content: center;
 }
 
 .navigation-links a {
-  margin: 20px;
+  margin: 0px;
 }
 
 .primary-link {
@@ -94,10 +95,7 @@ footer {
 .about-paragraphs p {
   margin: 20px;
 }
-.about-me-title {
-  text-align: center;
-  margin: 20px;
-}
+
 .email-link {
   display: flex;
   justify-content: center;
@@ -175,13 +173,72 @@ margin-top: 80px;
   line-height: 40px;
   text-align: center;
   font-weight: 600;
-  margin-top: 5px;
+  margin-top: 4px;
 }
 .banner-blurb {
   font-size: 20px;
   line-height: 28px;
   text-align: center;
+  margin: 8px;
 }
+
+.resume {
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.nav-link {
+    color: #007bff;
+    text-decoration: none;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+  
+footer {
+    text-align: center;
+    margin-top: 60px;
+  }
+  p {
+    font-size: medium;
+  }
+  li{
+    font-size: medium;
+  }
+}
+.about-me-page {
+  max-width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  background: hsl(0, 3%, 94%);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px  rgba(92, 67, 67, 0.1);
+}
+
+.indent {
+  text-indent: 20px;
+  line-height: 1.5;
+  margin: 20px;
+}
+.resume-page {
+  max-width: 800px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
 .projects-page {
   body {
     font-family: Arial, sans-serif;
@@ -215,6 +272,7 @@ margin-top: 80px;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 @media (max-width: 768px) { 
   .banner {
       height: 200px; 
@@ -230,6 +288,11 @@ margin-top: 80px;
   .banner-blurb {
       font-size: 20px; 
   }
+  .container {
+    margin-bottom: 10px;
+    margin-top:0px;
+  }
+
 }
 @media (max-width: 480px) { 
   .banner {
@@ -246,6 +309,10 @@ margin-top: 80px;
   .banner-blurb {
       font-size: 10px; 
   }
+  .container {
+    margin-bottom: 10px;
+    margin-top:0px;
+  }
 }
 @media (min-width: 900px) {
   .banner-intro {
@@ -256,3 +323,21 @@ margin-top: 80px;
       margin-bottom: 20px;
   }
 }
+
+@media print {
+  header {
+      display: none; 
+  }
+  body {
+      padding: 10px; 
+  }
+  .resume-page {
+      margin: 0;
+      padding: 20px; 
+  }
+  nav {
+      display: none; 
+  }
+}
+
+
