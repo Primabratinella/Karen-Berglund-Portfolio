@@ -7,7 +7,7 @@
       name="description"
       content="Karen Berglund a front-end developer based in Maryland USA, check out her work and contact her for your projects"
     />
-    <title>KAREN BERGLUND | front-end developer</title>
+    <title>KAREN BERGLUND | front-end developer | Contact</title>
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -71,8 +71,35 @@
       Let's connect on 
       <a href="https://www.linkedin.com/in/karenpearlbberglund/">LinkedIn</a>
   </div>
+<div class="flex-container">
+    <div class="form-container">
+        <h2>Contact Us</h2>
+    <div class="form-contact">
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="contact" placeholder="Contact Number" required>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('contactForm').onsubmit = function(event) {
+        event.preventDefault(); 
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const contact = document.getElementById('contact').value;
+        const message = document.getElementById('message').value;
+
+        alert(`Submitted:\nName: ${name}\nEmail: ${email}\nContact: ${contact}\nMessage: ${message}`);
+    };
+</script>
 
     <footer>
+
     <br>
       <p>&copy; 2026 Karen Berglund. All Rights Reserved.</p>
     <br>
