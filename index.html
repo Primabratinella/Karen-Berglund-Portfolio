@@ -64,14 +64,14 @@
         <div class="col-12 col-md-6">
           <img src="img/resume.png" class="img-fluid rounded" />
         </div>
-        <div class="col-12 col-md-6 text-center text-md-start d-flex flex-column justify-content-center">
+        <div class="feature-text col-12 col-md-6">
           <h2 class="mb-3">Resume</h2>
           <p>My resumé and an overview of how I work</p>
         
           <a href="resume.html" class="primary-link mt-3">Resumé</a>
         </div>
 
-        <div class="col-12 col-md-6 text-center text-md-start d-flex flex-column justify-content-center">
+        <div class="feature-text col-12 col-md-6">
           <h2 class="mb-3">Projects</h2>
           <p>  An overview of projects I have built  
           </p>
@@ -88,7 +88,7 @@
           <img src="img/social.png" class="img-fluid rounded" />
         </div>
 
-        <div class="col-12 col-md-6 text-center text-md-start d-flex flex-column justify-content-center">
+        <div class="feature-text col-12 col-md-6">
           <h2 class="mb-3">Let's Connect</h2>
           <p>
             I would love to hear from you. Let's connect!
@@ -97,7 +97,7 @@
         </div>
         
         <div class="row mt-5">
-            <div class="col-12 col-md-6 text-center text-md-start d-flex flex-column justify-content-center">
+          <div class="feature-text col-12 col-md-6">
               <h2 class="mb-3">Resources</h2>
               <p>
                 My on-going list of recommended books, sites etc.
@@ -110,24 +110,37 @@
           </div>
       </div>
 
-      <footer>
-        <div>
-        <h3> About the website </h3>
-            <p>
-                I created this page as a project to develop my coding skills.
-            This project was coded by Karen Berglund and is 
-            <a 
-            href="https://github.com/Primabratinella/Ph-travel-project"
-            target="_blank"
-        > 
-            open-sourced</a
-        >    
-            </p>
+      <footer class="ultimate-footer">
+        <div class="footer-content">
+      
+          <h3>About this website</h3>
+      
+          <p>
+            I created this page as a project to develop my coding skills.
+            This project was coded by Karen Berglund and is
+            <a href="https://github.com/Primabratinella/Ph-travel-project" target="_blank">
+              open-sourced
+            </a>.
+          </p>
+      
+          <!-- social icons -->
+          <div class="footer-socials">
+            <a href="https://www.linkedin.com/in/karenpearlbberglund/" target="_blank">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="mailto:your@email.com">Email</a>
+          </div>
+      
+          <div class="footer-divider"></div>
+      
+          <p class="footer-copy">
+            © 2026 Karen Berglund. All Rights Reserved.
+          </p>
+      
         </div>
-        <br>
-          <p>&copy; 2026 Karen Berglund. All Rights Reserved.</p>
-        <br>
-    </footer>
+      
+        <!-- back to top -->
+        <button class="back-to-top" onclick="scrollToTop()">↑</button>
+      </footer>
 
     </div>
 
@@ -147,6 +160,15 @@
           navbar.classList.remove("scrolled");
         }
       });
+    </script>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     </script>
 
   </body>

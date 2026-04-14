@@ -90,12 +90,37 @@
     };
 </script>
 
-    <footer>
+<footer class="ultimate-footer">
+  <div class="footer-content">
 
-    <br>
-      <p>&copy; 2026 Karen Berglund. All Rights Reserved.</p>
-    <br>
-    </footer>
+    <h3>About this website</h3>
+
+    <p>
+      I created this page as a project to develop my coding skills.
+      This project was coded by Karen Berglund and is
+      <a href="https://github.com/Primabratinella/Ph-travel-project" target="_blank">
+        open-sourced
+      </a>.
+    </p>
+
+    <!-- social icons -->
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/karenpearlbberglund/" target="_blank">LinkedIn</a>
+      <a href="#">GitHub</a>
+      <a href="mailto:your@email.com">Email</a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <p class="footer-copy">
+      © 2026 Karen Berglund. All Rights Reserved.
+    </p>
+
+  </div>
+
+  <!-- back to top -->
+  <button class="back-to-top" onclick="scrollToTop()">↑</button>
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
     >
     </script>
@@ -112,6 +137,15 @@
           navbar.classList.remove("scrolled");
         }
       });
+    </script>
+
+    <script>
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
     </script>
 </body>
 </html>
