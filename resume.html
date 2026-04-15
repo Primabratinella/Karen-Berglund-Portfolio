@@ -193,24 +193,6 @@
             <p>&copy; 2026 Karen Berglund. All Rights Reserved.</p>
         </footer>
 
-        <script>
-            document.getElementById('download-link').addEventListener('click', function(event) {
-                event.preventDefault(); 
-    
-                const element = document.getElementById('resume-content'); 
-    
-                const header = document.querySelector('header');
-                header.style.display = 'none'; 
-    
-                html2pdf()
-                    .from(element)
-                    .save('Your_Resume.pdf') 
-                    .then(() => {
-                        header.style.display = 'block'; 
-                        alert('Your resume PDF has been generated and will be downloaded.');
-                    });
-            });
-        </script>
     </div>
 
 </div>
@@ -221,16 +203,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js">
   </script>
 
-  <script>
-    window.addEventListener("scroll", function () {
-      const navbar = document.querySelector(".navbar");
-  
-      if (window.scrollY > 20) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
-  </script>
+  <script src="js/script.js"></script>
+
 </body>
 </html>
