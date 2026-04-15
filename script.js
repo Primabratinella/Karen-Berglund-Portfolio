@@ -1,50 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Navbar scroll
+  // Navbar scroll effect
   const navbar = document.querySelector(".navbar");
 
   if (navbar) {
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
       navbar.classList.toggle("scrolled", window.scrollY > 20);
     });
   }
 
-  // Back to top
+  // Back to top button
   const btn = document.querySelector(".back-to-top");
 
   if (btn) {
-    btn.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+    window.addEventListener("scroll", () => {
+      btn.classList.toggle("show", window.scrollY > 300);
     });
 
-    window.addEventListener("scroll", function () {
-      btn.classList.toggle("show", window.scrollY > window.innerHeight * 0.3);
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
-  console.log(window.scrollY);
-  
-  // Resume PDF
+
+  // Resume PDF download
   const downloadLink = document.getElementById("download-link");
 
   if (downloadLink) {
-    downloadLink.addEventListener("click", function (event) {
-      event.preventDefault();
+    downloadLink.addEventListener("click", function (e) {
+      e.preventDefault();
 
       const element = document.getElementById("resume-content");
-      const header = document.querySelector("header");
-
-      if (header) header.style.display = "none";
 
       html2pdf()
+        .set({
+          margin: 0.5,
+          filename: "Karen_Berglund_Resume.pdf",
+          html2canvas: { scale: 2 },
+          jsPDF: { format: "a4", orientation: "portrait" }
+        })
         .from(element)
-        .save("Your_Resume.pdf")
-        .then(() => {
-          if (header) header.style.display = "block";
-          alert("Your resume PDF has been generated and will be downloaded.");
-        });
+        .save();
     });
   }
 
