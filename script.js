@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (btn) {
     window.addEventListener("scroll", () => {
-      btn.classList.toggle("show", window.scrollY > 300);
+      btn.classList.toggle("show", window.scrollY > 100);
     });
 
     btn.addEventListener("click", () => {
