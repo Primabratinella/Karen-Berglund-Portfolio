@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Navbar scroll effect
   const navbar = document.querySelector(".navbar");
 
   if (navbar) {
@@ -9,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Back to top button
   const btn = document.querySelector(".back-to-top");
 
   if (btn) {
@@ -22,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Resume PDF download
   const downloadLink = document.getElementById("download-link");
 
   if (downloadLink) {
