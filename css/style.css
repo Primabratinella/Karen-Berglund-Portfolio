@@ -66,51 +66,70 @@ p, li {
 }
 
 .banner {
-  width: 100%;
-  min-height: 60vh;
-  background: url('../img/headerbanner.png') center/cover no-repeat;
+  background: 
+    linear-gradient(135deg, rgba(197,75,140,0.25), rgba(0,0,0,0.2)),
+    url('../img/headerbanner.png') center/cover no-repeat;
+  background-size: cover;
+  max-height: 420px;
+  position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 28px 15px;
+  overflow: hidden;
+}
 
-  padding: 60px 15px;
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.12), transparent 60%);
+  z-index: 0;
 }
 
 .banner-intro {
-  width: min(850px, 95%);
-  padding: 35px 25px;
-  border-radius: 14px;
+  width: min(920px, 92%);
+  padding: 20px 28px;
+  border-radius: 12px;
 
   background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(8px);
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10px;
+  position: relative;
 
   text-align: center;
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  z-index: 1;
 }
 
 .banner-profile-pic {
-  width: 100px;
-  height: 100px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
   background: url('../img/karenberglund.jpg') center/cover no-repeat;
-  border: 3px solid white;
+  border: 4px solid white;
+  background-size: cover;
+  background-position: center;
 }
 
 .banner-title {
-  font-size: 22px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.12;
+  margin: 0;
 }
 
 .banner-blurb {
   font-size: 14px;
-  opacity: 0.85;
+  line-height: 1.45;
+  max-width: 640px;
+  margin: 0;
 }
 
 .primary-link,
@@ -467,7 +486,24 @@ p, li {
   }
 
   .banner {
-    min-height: 50vh;
+    padding: 20px 12px;
+    max-height: none;
+  }
+  .banner-intro {
+    padding: 16px 18px;
+    width: min(92%, 680px);
+  }
+  .banner-profile-pic{
+    width: 72px;
+    height: 72px;
+    border-width: 3px;
+  }
+  .banner-title{
+    font-size: 20px;
+  }
+  .banner-blurb{
+    font-size: 14px;
+    max-width: 90%;
   }
 }
 
