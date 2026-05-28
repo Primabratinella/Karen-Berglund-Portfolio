@@ -2,7 +2,6 @@
   --primary-color: #c54b8c;
   --secondary-color: #fbaed2;
 }
-
 * {
   box-sizing: border-box;
 }
@@ -38,7 +37,6 @@ p, li {
   text-align: left;
 }
 
-
 .navbar {
   min-height: 70px;
   background: rgba(255,255,255,0.95) !important;
@@ -67,17 +65,16 @@ p, li {
 
 .banner {
   background: 
-    linear-gradient(135deg, rgba(197,75,140,0.25), rgba(0,0,0,0.2)),
+    linear-gradient(135deg, rgba(197,75,140,0.25), rgba(0,0,0,0.30)),
     url('../img/headerbanner.png') center/cover no-repeat;
-  background-size: cover;
-  max-height: 420px;
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 28px 15px;
+  padding: 80px 20px;
   overflow: hidden;
+  min-height: 80vh;
 }
 
 .banner::before {
@@ -89,47 +86,47 @@ p, li {
 }
 
 .banner-intro {
-  width: min(920px, 92%);
-  padding: 20px 28px;
-  border-radius: 12px;
-
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  border-radius: 20px;
   background: rgba(255,255,255,0.88);
-  backdrop-filter: blur(8px);
-
+  backdrop-filter: blur(14px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.30);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  position: relative;
-
-  text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-  z-index: 1;
+  gap: 16px;
+  padding: 60px 45px;
 }
 
 .banner-profile-pic {
-  width: 88px;
-  height: 88px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   background: url('../img/karenberglund.jpg') center/cover no-repeat;
-  border: 4px solid white;
+  border: 5px solid white;
   background-size: cover;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
   background-position: center;
 }
 
 .banner-title {
-  font-size: 26px;
+  font-size: 38px;
   font-weight: 700;
-  line-height: 1.12;
+  letter-spacing: 0.5px;
   margin: 0;
+  color: #111;
 }
 
 .banner-blurb {
-  font-size: 14px;
-  line-height: 1.45;
-  max-width: 640px;
-  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  color: #333;
+  opacity: 0.9;
+  max-width: 500px;
 }
 
 .primary-link,
@@ -608,215 +605,39 @@ p, li {
   background: var(--primary-color);
   color: white;
 }
-
-.banner {
-  min-height: 75vh; 
-  padding: 80px 15px;
-}
-
-.banner-intro {
-  width: min(900px, 95%);
-  padding: 50px 35px; 
-  border-radius: 18px;
-
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(12px);
-
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
-
-  gap: 14px; 
-}
-
-.banner-profile-pic {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 4px solid white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.banner-title {
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-}
-
-.banner-blurb {
-  font-size: 16px;
-  opacity: 0.85;
-}
-
-.secondary-link {
-  padding: 10px 18px;
-  font-size: 14px;
-  border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .banner {
-    min-height: 60vh;
-    padding: 60px 10px;
-  }
-
+@media (max-width: 1024px) {
   .banner-intro {
-    padding: 35px 20px;
+  max-width: 720px;
+  padding: 50px 35px;
   }
-
-  .banner-profile-pic {
-    width: 110px;
-    height: 110px;
   }
-
-  .banner-title {
-    font-size: 24px;
-  }
-
-  .banner-blurb {
-    font-size: 14px;
-  }
-}
-
-.banner-title {
-  font-size: 40px !important;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.banner-blurb {
-  font-size: 20px !important;
-  line-height: 1.6;
-  opacity: 0.9;
-}
-
-.banner-intro {
-  padding: 55px 40px;
-}
-
-.banner-profile-pic {
-  width: 160px;
-  height: 160px;
-}
-
-.banner {
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 80px 20px;
-
-  position: relative;
-  overflow: hidden;
-
   
-  background:
-    linear-gradient(
-      135deg,
-      rgba(197, 75, 140, 0.35),
-      rgba(0, 0, 0, 0.35)
-    ),
-    url("../img/headerbanner.png") center/cover no-repeat;
-}
-
-.banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.15), transparent 60%);
-  z-index: 0;
-}
-
-.banner-intro {
-  position: relative;
-  z-index: 1;
-
-  width: min(920px, 92%);
-  padding: 60px 45px;
-
-  text-align: center;
-
-  border-radius: 20px;
-
-  background: rgba(255, 255, 255, 0.78);
-  backdrop-filter: blur(14px);
-
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
-.banner-profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-
-  border: 5px solid white;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-}
-
-.banner-title {
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  color: #111;
-}
-
-.banner-blurb {
-  font-size: 18px;
-  font-weight: 400;
-  color: #333;
-  opacity: 0.9;
-  max-width: 500px;
-}
-
-.secondary-link {
-  margin-top: 10px;
-  padding: 12px 22px;
-  font-size: 14px;
-
-  border-radius: 10px;
-
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
-
-  background: transparent;
-
-  transition: all 0.3s ease;
-}
-
-.secondary-link:hover {
-  background: var(--primary-color);
-  color: white;
-  transform: translateY(-2px);
-}
-
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
   .banner {
-    min-height: 65vh;
-    padding: 60px 15px;
+  min-height: 65vh;
+  padding: 60px 15px;
   }
-
+  
   .banner-intro {
-    padding: 40px 25px;
+  padding: 40px 25px;
+  max-width: 92%;
   }
-
+  
   .banner-profile-pic {
-    width: 120px;
-    height: 120px;
+  width: 120px;
+  height: 120px;
   }
-
+  
   .banner-title {
-    font-size: 30px;
+  font-size: 30px;
   }
-
+  
   .banner-blurb {
-    font-size: 16px;
+  font-size: 16px;
   }
-}
-.back-to-top {
+  }
+  
+  .back-to-top {
   position: fixed;
   right: 20px;
   bottom: 20px;
@@ -826,16 +647,16 @@ p, li {
   padding: 10px 12px;
   border-radius: 50%;
   cursor: pointer;
-
+  
   opacity: 0;
   visibility: hidden;
-
+  
   transition: all 0.3s ease;
   transform: translateY(10px);
-}
-
-.back-to-top.show {
+  }
+  
+  .back-to-top.show {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-}
+  }
