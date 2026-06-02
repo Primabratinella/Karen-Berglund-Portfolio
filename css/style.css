@@ -72,9 +72,9 @@ p, li {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 20px;
+  padding: 40px 18px;
   overflow: hidden;
-  min-height: 80vh;
+  min-height: 50vh;
 }
 
 .banner::before {
@@ -99,7 +99,7 @@ p, li {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  padding: 60px 45px;
+  padding: 28px 30px;
 }
 
 .banner-profile-pic {
@@ -114,7 +114,7 @@ p, li {
 }
 
 .banner-title {
-  font-size: 38px;
+  font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin: 0;
@@ -210,9 +210,11 @@ p, li {
   
   .about-paragraphs {
   text-align: center;
-  padding: 20px;
+  padding: 26px 20px;
   background: var(--primary-color);
   color: white;
+  font-size: 18px;
+  line-height: 1.6;
   }
   
   .resume-page {
@@ -715,27 +717,57 @@ p, li {
   border-radius: 8px;
   }
   
+  @media (max-width:1024px) {
+    .banner {
+      min-height: 48vh;
+      padding: 36px 14px;
+    }
+    .banner-intro{
+      padding: 24px 22px;
+      max-width: 820px;
+    }
+    .banner-profile-pic{
+      width: 96px;
+      height: 96px;
+    }
+    .banner-title{
+      font-size: 24px;
+    }
+    .banner-blurb{
+      font-size: 18px;
+      max-width: 620px;
+    }
+    .about-paragraphs{
+      font-size: 17px;
+    }
+  }
   @media (max-width: 768px) {
   .banner {
-  min-height: 60vh;
-  padding: 60px 10px;
+  min-height: 42vh;
+  padding: 28px 12px;
   }
   
   .banner-intro {
-  padding: 35px 20px;
+  padding: 20px 16px;
+  max-width: 90%;
   }
   
   .banner-profile-pic {
-  width: 110px;
-  height: 110px;
+  width: 88px;
+  height: 88px;
   }
   
   .banner-title {
-  font-size: 24px;
+  font-size: 20px;
   }
   
   .banner-blurb {
-  font-size: 14px;
+  font-size: 16px;
+  max-width: 90%;
+  }
+  .about-paragraphs{
+    font-size: 16px;
+    padding: 20px 12px;
   }
   }
   
@@ -856,29 +888,25 @@ p, li {
   }
   
   @media (max-width: 768px) {
-  .banner {
-  min-height: 65vh;
-  padding: 60px 15px;
+    .banner {
+      min-height: 65vh;
+      padding: 60px 15px;
   }
-  
-  .banner-intro {
-  padding: 40px 25px;
+    .banner-intro {
+      padding: 40px 25px;
   }
-  
-  .banner-profile-pic {
-  width: 120px;
-  height: 120px;
+    .banner-profile-pic {
+      width: 120px;
+      height: 120px;
   }
-  
-  .banner-title {
-  font-size: 30px;
+    .banner-title {
+      font-size: 30px;
   }
-  
-  .banner-blurb {
-  font-size: 16px;
+    .banner-blurb {
+      font-size: 16px;
   }
   }
-  
+
   .back-to-top {
   position: fixed;
   right: 20px;
