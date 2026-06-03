@@ -105,4 +105,29 @@ document.addEventListener('DOMContentLoaded', () => {
     try { html2pdf().from(container).set(opt).save(); } catch (saveErr) { console.error(saveErr); }
   });
   }, { passive: false });
+
+  const contactForm = document.getElementById('contactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const payload = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        contact: document.getElementById('contact').value,
+        message: document.getElementById('message').value
+      };
+      try {
+        const res = await fetch('https:"//your-server-domain.com/send-contact', {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body:JSON.stringify(payload)
+        });
+        if (res.ok) alert('Message sent.');
+        else alert('Send failed.');
+      } catch (err){
+        console.error(err);
+        alert('Send failed.');
+      }
+    });
+  }
 });
