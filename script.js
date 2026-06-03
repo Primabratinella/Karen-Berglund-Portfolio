@@ -1,21 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
   const downloadLink = document.getElementById('download-link');
-  if (!downloadLink) throw new Error('downloadLink element not found');
-
-  downloadLink.addEventListener("click", function (e) {
+  if (!downloadLink){ 
+    console.warn('downloadLink element not found - skipping download heandler');
+  } else {
+    downloadLink.addEventListener("click", function (e) {
     e.preventDefault();
     e.stopPropagation();
-
-  const resumeContent = document.getElementById("resume-content");
-  const start = document.querySelector(".resume-header");
-  if (!resumeContent || !start) return;
-
-  const container = document.createElement("div");
-  container.style.background = "#fff";
-  container.style.boxSizing = "border-box";
-  container.style.padding = "16px";
-  container.style.fontFamily = getComputedStyle(document.body).fontFamily || "Arial, sans-serif";
-  container.style.color = getComputedStyle(document.body).color || "#000";
+    
+    const resumeContent = document.getElementById("resume-content");
+    const start = document.querySelector(".resume-header");
+    if (!resumeContent || !start) return;
+    
+    const container = document.createElement("div");
+    container.style.background = "#fff";
+    container.style.boxSizing = "border-box";
+    container.style.padding = "16px";
+    container.style.fontFamily = getComputedStyle(document.body).fontFamily || "Arial, sans-serif";
+    container.style.color = getComputedStyle(document.body).color || "#000";
 
   let append = false;
   Array.from(resumeContent.children).forEach(child => {
@@ -105,29 +106,42 @@ document.addEventListener('DOMContentLoaded', () => {
     try { html2pdf().from(container).set(opt).save(); } catch (saveErr) { console.error(saveErr); }
   });
   }, { passive: false });
+}
 
   const contactForm = document.getElementById('contactForm');
+  const statusEl = document.getElementById ('status');
+  
   if(contactForm){
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const payload = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        contact: document.getElementById('contact').value,
-        message: document.getElementById('message').value
-      };
+      const formData = new FormData(contactForm);
+
       try {
-        const res = await fetch('https:"//your-server-domain.com/send-contact', {
+        const res = await fetch('https://formspree.io/f/mbdernkw', {
           method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body:JSON.stringify(payload)
-        });
-        if (res.ok) alert('Message sent.');
-        else alert('Send failed.');
-      } catch (err){
-        console.error(err);
-        alert('Send failed.');
-      }
-    });
-  }
+          body:formData});
+          const text = await res.text();
+          console.log ('status', res.status, 'body', text);
+      
+        if (res.ok) {
+          if (statusEl) {statusEl.textContent = 'Message sent - thank you!';
+            statusEl.className = 'success';
+          }
+          contactForm.reset ();
+        } else {
+          if (statusEl) { statusEl.textContent = text || 'Send failed.';
+            statusEl.className = 'error'; }
+          }
+
+          contactForm.reset ();
+          
+        } catch (err) {
+          console.error (err);
+          if (statusEl) { statusEl.textContent = 'Network error. Please try again.';
+            statusEl.className = 'error'; }
+        }
+});
+} else {
+  console.warn ('No contactForm found.');
+}
 });
